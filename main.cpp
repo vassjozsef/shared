@@ -6,7 +6,7 @@ public:
   virtual void Send() = 0;
 };
 
-class Adapter : public Transport, std::enable_shared_from_this<Adapter>  {
+class Adapter : public Transport, public std::enable_shared_from_this<Adapter>  {
 public:
   virtual void Send() {
     std::cout << "Send" << std::endl;
